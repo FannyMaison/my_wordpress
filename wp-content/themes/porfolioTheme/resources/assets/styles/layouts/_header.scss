@@ -1,3 +1,13 @@
+header {
+  display: flex;
+  margin-top: 2%;
+
+  div.container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .banner .nav li {
   @extend .nav-item;
 }
