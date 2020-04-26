@@ -1,0 +1,37 @@
+body {
+  header.header_realisation {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    background-image: none;
+
+    h1 {
+      margin-bottom: 2.5rem;
+      font-size: 5.5rem;
+    }
+  }
+
+  div.realisation_content {
+    display: flex;
+    margin-top: 10%;
+
+    h5 {
+      color: darkgray;
+    }
+
+    p {
+      text-align: justify;
+      width: 70%;
+      font-size: 1.1em;
+    }
+
+    a {
+      margin: 0 35%;
+      font-size: 1.5em;
+    }
+
+    div.technologies {
+      margin-top: 2%;
+    }
+  }
+}

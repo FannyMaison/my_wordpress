@@ -1,13 +1,20 @@
-<article @php post_class() @endphp>
-  <header>
-    <h1 class="entry-title">{!! get_the_title() !!}</h1>
-    @include('partials/entry-meta')
+  <header class="header_realisation">
+    <h1 class="entry-title">{{{ $realisation->name }}}</h1>
+    <p>{{ $realisation->subtitle }}</p>
   </header>
-  <div class="entry-content">
-    @php the_content() @endphp
+  <div class="entry-content leading-normal">
+    <section>
+      <div class="realisation_content">
+        <div>
+          <h5>Présentation du projet</h5>
+          <p>{{ $realisation->description }}</p>
+          <a href="{{ $realisation->link }}">Voir le Git</a>
+          <div class="technologies">
+            <h5>Technologies utilisées</h5>
+            <p>{{ $realisation->technologies }}</p>
+          </div>
+        </div>
+        <img src="{{ $realisation->img->url }}" alt="{{ $realisation->alt }}">
+      </div>      
+    </section>
   </div>
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
-  @php comments_template('/partials/comments.blade.php') @endphp
-</article>

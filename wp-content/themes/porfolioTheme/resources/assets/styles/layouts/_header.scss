@@ -1,10 +1,22 @@
 header {
   display: flex;
-  margin-top: 2%;
+  padding-top: 2%;
+  background: url("../images/curvy_background.png") no-repeat;
+  height: 574px;
 
   div.container {
     display: flex;
     justify-content: space-between;
+
+    nav a {
+      color: black;
+      font-weight: 700;
+      font-size: 1.3em;
+    }
+
+    img {
+      width: 50%;
+    }
   }
 }
 

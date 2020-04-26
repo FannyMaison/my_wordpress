@@ -2,10 +2,12 @@
 
 namespace App\Controllers;
 
+use App\Traits\Image;
 use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
+	use Image;
 	public function realisations()
 	{
 		$args = array(
@@ -21,8 +23,8 @@ class FrontPage extends Controller
 
 	     if ($the_query->post_count > 0) {
 	     	  $realisations = array_map(function($realisation){
-	     	  $subtitle = get_field('subtitle', $realisation);
 	     	  $image = get_field('image_preview', $realisation);
+	     	  $name = get_field('realisation_name', $realisation);
 		      // variables
 		      $url = $image['url'];
 		      $alt = $image['alt'];
@@ -31,10 +33,11 @@ class FrontPage extends Controller
 		      $thumb = $image['sizes'][$size];
 
 		      return (object) [
+		      	//'img' => $this->getImage($realisation),
 		      	'url' => $url,
 		      	'thumb' => $thumb,
 		      	'alt' => $alt,
-		      	'subtitle' => $subtitle,
+		      	'name' => $name,
 		      	'permalink' => get_post_permalink($realisation)
 		      ];
 	     	}, $the_query->posts);

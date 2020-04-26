@@ -39,7 +39,7 @@ class PageRealisations extends Controller
 		      ];
 	     	}, $the_query->posts);
 
-	     	wp_rest_postdata();
+	     	wp_reset_postdata();
 	     }
 	     return $realisations;
 	}

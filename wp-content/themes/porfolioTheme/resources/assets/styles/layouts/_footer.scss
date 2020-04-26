@@ -1,0 +1,19 @@
+footer {
+  height: 50vh;
+  background-color: $gray_blue;
+  margin-top: 10%;
+  padding: 6% 0 1% 0;
+  text-align: center;
+
+  div.contact {
+    margin-bottom: 2%;
+  }
+
+  p:last-of-type {
+    margin: 105px 0 0 0;
+  }
+
+  div.contact p {
+    margin: 0;
+  }
+}

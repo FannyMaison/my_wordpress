@@ -1,3 +1,93 @@
 body {
-  background-color: $light_grey;
+  background-color: $light_gray;
+  color: $light_black;
+
+  a {
+    color: $light_black;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: none;
+      color: $purple;
+    }
+  }
+
+  section.py-5 {
+    h2 {
+      text-align: center;
+      margin-bottom: 3.5rem;
+      font-weight: 300;
+      font-size: 4rem;
+    }
+
+    hr {
+      width: 20%;
+      border: none;
+      color: $light_black;
+    }
+
+    div.flex {
+      display: flex;
+
+      a {
+        color: $light_black;
+
+        &:hover {
+          text-decoration: none;
+          color: $purple;
+        }
+
+        div {
+          padding: 3rem;
+        }
+      }
+
+      a:first-of-type {
+        div:first-of-type {
+          padding-left: 0;
+        }
+      }
+    }
+
+    div.bg-powderblue {
+      background-color: powderblue;
+    }
+  }
+}
+
+section.portfolio-wrapper {
+  margin: 10% 10% auto;
+
+  div.informations {
+    text-align: center;
+    font-size: 1.5em;
+
+    a.email {
+      color: $light_black;
+      font-weight: 500px;
+      font-size: 2em;
+
+      &:hover {
+        text-decoration: none;
+        color: $purple;
+        text-shadow: 1px 1px 1px black;
+      }
+    }
+
+    p:last-of-type {
+      font-size: 1.8em;
+    }
+  }
+
+  div.about {
+    font-size: 1.3em;
+
+    a.cv_link {
+      background-color: $light_black;
+      color: $gray_blue;
+      font-size: 1.5em;
+      padding: 1% 2%;
+      margin-top: 5%;
+    }
+  }
 }

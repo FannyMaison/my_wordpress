@@ -1,14 +1,20 @@
-<article <?php post_class() ?>>
-  <header>
-    <h1 class="entry-title"><?php echo get_the_title(); ?></h1>
-    <?php echo $__env->make('partials/entry-meta', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <header class="header_realisation">
+    <h1 class="entry-title"><?php echo e($realisation->name); ?></h1>
+    <p><?php echo e($realisation->subtitle); ?></p>
   </header>
-  <div class="entry-content">
-    <?php the_content() ?>
+  <div class="entry-content leading-normal">
+    <section>
+      <div class="realisation_content">
+        <div>
+          <h5>Présentation du projet</h5>
+          <p><?php echo e($realisation->description); ?></p>
+          <a href="<?php echo e($realisation->link); ?>">Voir le Git</a>
+          <div class="technologies">
+            <h5>Technologies utilisées</h5>
+            <p><?php echo e($realisation->technologies); ?></p>
+          </div>
+        </div>
+        <img src="<?php echo e($realisation->img->url); ?>" alt="<?php echo e($realisation->alt); ?>">
+      </div>      
+    </section>
   </div>
-  <footer>
-    <?php echo wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
-
-  </footer>
-  <?php comments_template('/partials/comments.blade.php') ?>
-</article>

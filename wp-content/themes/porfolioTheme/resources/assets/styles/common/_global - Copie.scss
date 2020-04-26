@@ -1,0 +1,29 @@
+body {
+  background-color: $light_grey;
+  color: $light_black;
+
+  section.py-5 {
+    h2 {
+      text-align: center;
+    }
+
+    div.flex {
+      display: flex;
+
+      a {
+        color: black;
+
+        div {
+          padding: 3rem;
+          background-color: purple;
+        }
+
+        &:first-of-type {
+          div:first-of-type {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
