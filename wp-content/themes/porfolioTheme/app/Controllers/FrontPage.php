@@ -13,7 +13,7 @@ class FrontPage extends Controller
 		$args = array(
 	      'posts_per_page' => '1000',
 	      'offset' => 0,
-	      'orderby' => 'date',
+	      'orderby' => 'rand',
 	      'order' => 'DESC',
 	      'post_type' => 'realisations'
 	     );

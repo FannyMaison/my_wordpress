@@ -4,6 +4,9 @@ body {
     text-align: center;
     margin-top: 5%;
     background-image: none;
+    position: absolute;
+    top: 10%;
+    left: 34%;
 
     h1 {
       margin-bottom: 2.5rem;
@@ -13,7 +16,11 @@ body {
 
   div.realisation_content {
     display: flex;
-    margin-top: 10%;
+    margin-top: 2%;
+
+    div:first-of-type {
+      width: 150%;
+    }
 
     h5 {
       color: darkgray;
@@ -21,17 +28,28 @@ body {
 
     p {
       text-align: justify;
-      width: 70%;
+      width: 75%;
       font-size: 1.1em;
     }
 
     a {
-      margin: 0 35%;
+      margin: 0 28%;
       font-size: 1.5em;
     }
 
     div.technologies {
-      margin-top: 2%;
+      margin-top: 4%;
     }
+  }
+
+  div.link {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    right: 10%;
+    bottom: 28%;
+    width: 400px;
+    font-size: 1.2em;
+    text-decoration: underline;
   }
 }

@@ -1,6 +1,7 @@
 <?php $__env->startSection('content'); ?>
   <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-  <section class="py-5">
+  <section class="py-3">
+    <p class="introduction">Enchantée,<br><span class="text">Fanny Maison, créatrice de costume en tout genre</span><span id="feature" class="text"></span><span class="text"> et développeuse</span><br>Bienvenue sur mon portfolio</p>
     <h2>Mes réalisations</h2>
     <hr>
     <div class="flex rounded bg-powderblue">

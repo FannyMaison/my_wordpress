@@ -1,6 +1,7 @@
 body {
   background-color: $light_gray;
   color: $light_black;
+  position: relative;
 
   a {
     color: $light_black;
@@ -12,18 +13,29 @@ body {
     }
   }
 
-  section.py-5 {
+  section.py-3 {
+    p.introduction {
+      position: absolute;
+      top: 11%;
+      font-size: 1.7em;
+      font-style: italic;
+    }
+
     h2 {
       text-align: center;
-      margin-bottom: 3.5rem;
+
+      /* margin-bottom: 3.5rem; */
       font-weight: 300;
       font-size: 4rem;
     }
 
     hr {
       width: 20%;
-      border: none;
+
+      /* border: none; */
       color: $light_black;
+      height: 4px;
+      margin-bottom: 3.5rem;
     }
 
     div.flex {
@@ -55,8 +67,15 @@ body {
   }
 }
 
+section#about {
+  width: 45%;
+  margin: 7% 10% auto;
+}
+
 section.portfolio-wrapper {
   margin: 10% 10% auto;
+  position: absolute;
+  top: 3%;
 
   div.informations {
     text-align: center;
